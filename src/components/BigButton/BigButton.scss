@@ -1,0 +1,11 @@
+$fontPrincipalColor: #fff;
+$borderNavbarItemColor: #b9b9b9;
+
+.BigButton__btn {
+  border: 3px solid $fontPrincipalColor;
+  background-color: #ffffff00;
+  padding: 15px 40px;
+  color: $fontPrincipalColor;
+  font-size: 18px;
+  cursor: pointer;
+}

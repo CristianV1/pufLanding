@@ -1,0 +1,78 @@
+@import "../../sass/variables.scss";
+
+.navbar__ {
+  &container {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    z-index: 10;
+    width: 100vw;
+    max-width: 100%;
+    height: 100px;
+    color: $fontPrincipalColor;
+  }
+
+  &items {
+    &--left {
+      cursor: pointer;
+      position: absolute;
+      left: 20px;
+      font-size: 40px;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    &--center {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      font-weight: 600;
+      &__item {
+        cursor: pointer;
+        text-align: center;
+        padding: 0 10px;
+        &:nth-child(2) {
+          border-left: 1px solid $borderNavbarItemColor;
+          .rotate {
+            transform: rotate(-45deg);
+          }
+        }
+        &:nth-child(3) {
+          border-left: 1px solid $borderNavbarItemColor;
+          border-right: 1px solid #b9b9b9;
+        }
+
+        span {
+          display: block;
+
+          cursor: pointer;
+        }
+        &:nth-child(2) {
+        }
+        &__icon {
+          cursor: pointer;
+          font-size: 25px;
+        }
+      }
+    }
+
+    &--right {
+      position: absolute;
+      top: 30px;
+      font-size: 13px;
+      right: 50px;
+      &__item {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 10px;
+        &:nth-child(1) {
+          border-right: 1px solid $borderNavbarItemColor;
+        }
+        &__icon {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

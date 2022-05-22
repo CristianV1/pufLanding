@@ -1,0 +1,11 @@
+.productsSection {
+  &__container {
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 500px;
+
+    background-color: aliceblue;
+  }
+}

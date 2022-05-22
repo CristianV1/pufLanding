@@ -1,0 +1,49 @@
+@import "../../../sass/variables.scss";
+
+.FooterSection {
+  &__container {
+    border-top: 1px solid $greyColor;
+    box-shadow: 0px 6px 13px 0px #000000;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 200px;
+    display: flex;
+    padding: 50px 20px;
+  }
+
+  &__logo {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 800;
+    align-self: flex-start;
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  &__item {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    &:last-child {
+      padding-right: 50px;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+    &__security--icon {
+      font-size: 34px;
+    }
+
+    &__aditionalText {
+      display: inline-block;
+      width: 90px;
+      color: $fontSecondaryColor;
+      font-size: 11px;
+    }
+    &__socialMedia > * {
+      margin: 0 3px;
+    }
+  }
+}

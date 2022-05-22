@@ -1,0 +1,119 @@
+@import "../../../sass/variables.scss";
+
+.mainSection {
+  &__container {
+    width: 99vw;
+    max-width: 100%;
+    height: 100vh;
+  }
+
+  &__slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    input {
+      display: none;
+    }
+
+    &__slide {
+      z-index: -1;
+      width: 20%;
+      transition: 2s;
+    }
+
+    &__slide img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &__manualNavigation {
+    position: absolute;
+    width: 20%;
+    display: flex;
+    z-index: 6;
+    bottom: 20px;
+    justify-content: center;
+    &__btn {
+      position: relative;
+      background-color: $fontPrincipalColor;
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+      &::after {
+        display: none;
+        position: absolute;
+        content: "";
+        border: 2px solid $fontPrincipalColor;
+        right: -4px;
+        border-radius: 10px;
+
+        top: -4px;
+        padding: 7px;
+        transition: 1s;
+      }
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      &:hover {
+        background-color: brown;
+      }
+    }
+  }
+
+  &__message {
+    color: $fontPrincipalColor;
+    font-size: 40px;
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    text-align: center;
+    transform: translate(50%, -50%);
+  }
+}
+
+#radio {
+  &1:checked {
+    & ~ .mainSection__manualNavigation > *:nth-child(1) {
+      &::after {
+        display: block;
+      }
+    }
+
+    & ~ .first {
+      margin-left: 0;
+    }
+  }
+  &2:checked {
+    & ~ .mainSection__manualNavigation > *:nth-child(2) {
+      &::after {
+        display: block;
+      }
+    }
+    background-color: $fontPrincipalColor;
+    & ~ .first {
+      margin-left: -20%;
+    }
+  }
+  &3:checked {
+    & ~ .mainSection__manualNavigation > *:nth-child(3) {
+      &::after {
+        display: block;
+      }
+    }
+    background-color: $fontPrincipalColor;
+    & ~ .first {
+      margin-left: -40%;
+    }
+  }
+}
